@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Animal Classification</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="content">
+            <p>Classify your image into one of the following animals: <strong>Dog</strong>, <strong>Horse</strong>, <strong>Elephant</strong>, <strong>Butterfly</strong>, <strong>Chicken</strong>, <strong>Cat</strong>, <strong>Cow</strong>, <strong>Sheep</strong>, <strong>Spider</strong>, <strong>Squirrel</strong>.</p>
+            </p>
+            <h2>Upload any Animal Image</h2>
+            <div class="form-container">
+                <form action="/prediction" method="POST" enctype="multipart/form-data">
+                    <h3>Upload Image File</h3>
+                    <input type="file" name="file" required>
+                    <input type="submit" value="Upload">
+                </form>
+
+                <form action="/prediction" method="POST">
+                    <h3>Or Provide a Link</h3>
+                    <input type="text" name="link" placeholder="Enter image URL" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>

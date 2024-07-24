@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Animal Classification</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="prediction-results">
+            <h2>Prediction Results</h2>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='uploaded_images/' + img) }}" alt="Uploaded Image">
+            </div>
+            <div class="results-table">
+                <table>
+                    <tr>
+                        <th>Animal</th>
+                        <th>Probability</th>
+                    </tr>
+                    <tr>
+                        <td>{{ predictions.class1 }}</td>
+                        <td>{{ predictions.prob1 }} %</td>
+                    </tr>
+                    <tr>
+                        <td>{{ predictions.class2 }}</td>
+                        <td>{{ predictions.prob2 }} %</td>
+                    </tr>
+                    <tr>
+                        <td>{{ predictions.class3 }}</td>
+                        <td>{{ predictions.prob3 }} %</td>
+                    </tr>
+                </table>
+            </div>
+            <a class="back-button" href="/">Back to Home</a>
+        </section>
+    </div>
+</body>
+</html>

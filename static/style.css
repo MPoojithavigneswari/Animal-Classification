@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0 0 0 0; 
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; 
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li.current a {
+    font-weight: bold;
+}
+
+.container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#content {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between the forms */
+}
+
+form {
+    flex: 1;
+    max-width: 300px; /* Same width for both forms */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="file"],
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background: #45a049;
+}
+
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.prediction-results {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.results-table {
+    margin: 20px auto;
+}
+
+.results-table table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.results-table td {
+    background-color: #f9f9f9;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background: #45a049;
+}
